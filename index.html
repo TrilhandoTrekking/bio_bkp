@@ -10,20 +10,49 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             background-color: #f0f0f0;
             color: #333;
-            height: 100vh;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        header h2 {
+            text-align: left;
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 20px;
         }
         .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            max-width: 1200px;
             width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
         }
         .image-block {
             border: 2px solid #4CAF50;
@@ -44,26 +73,32 @@
     </style>
 </head>
 <body>
-    <div class="gallery">
-        <div class="image-block" onclick="window.location.href='https://example.com/link1'">
-            <img src="image1.jpg" alt="Image 1">
+    <header>
+        <img src="logo.png" alt="Logo">
+        <h2>Trilhando Trekking</h2>
+    </header>
+    <div class="container">
+        <div class="gallery">
+            <div class="image-block" onclick="window.location.href='https://example.com/link1'">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="image-block" onclick="window.location.href='https://example.com/link2'">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="image-block" onclick="window.location.href='https://example.com/link3'">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+            <div class="image-block" onclick="window.location.href='https://example.com/link4'">
+                <img src="image4.jpg" alt="Image 4">
+            </div>
+            <div class="image-block" onclick="window.location.href='https://example.com/link5'">
+                <img src="image5.jpg" alt="Image 5">
+            </div>
+            <div class="image-block" onclick="window.location.href='https://example.com/link6'">
+                <img src="image6.jpg" alt="Image 6">
+            </div>
+            <!-- Adicione mais blocos de imagens conforme necessário -->
         </div>
-        <div class="image-block" onclick="window.location.href='https://example.com/link2'">
-            <img src="image2.jpg" alt="Image 2">
-        </div>
-        <div class="image-block" onclick="window.location.href='https://example.com/link3'">
-            <img src="image3.jpg" alt="Image 3">
-        </div>
-        <div class="image-block" onclick="window.location.href='https://example.com/link4'">
-            <img src="image4.jpg" alt="Image 4">
-        </div>
-        <div class="image-block" onclick="window.location.href='https://example.com/link5'">
-            <img src="image5.jpg" alt="Image 5">
-        </div>
-        <div class="image-block" onclick="window.location.href='https://example.com/link6'">
-            <img src="image6.jpg" alt="Image 6">
-        </div>
-        <!-- Adicione mais blocos de imagens conforme necessário -->
     </div>
 </body>
 </html>
